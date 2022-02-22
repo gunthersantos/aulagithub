@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #796c86;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+style {
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.logo {
+  margin-top: 75px;
+  height: 120px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #ebe489;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.form-control {
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.search_button {
+  width: 20px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+/* .:Parte Mobile:. */
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Formulário Contato Desktop */
+
+.cont_Title {
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  margin-top: 20px;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  color: gray;
+}
+
+.form_Cont {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: grid;
+  width: 600px;
+  gap: 10px;
+}
+
+#name,
+#telefone,
+#email {
+  padding: 10px;
+  outline: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom-width: 1px;
+  border-left-width: 5px;
+  border-bottom-color: rgb(160, 160, 160);
+  border-left-color: rgb(206, 206, 206);
+}
+
+#name:hover,
+#telefone:hover,
+#email:hover {
+  border-left-width: 5px;
+  border-left-color: rgb(22, 119, 246);
+}
+
+#name:focus,
+#telefone:focus,
+#email:focus {
+  border: solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+  border-left-width: 5px;
+  border-color: rgb(22, 119, 246);
+  background: rgba(187, 182, 182, 0.575);
+}
+
+textarea {
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+textarea:focus {
+  outline-color: rgb(22, 119, 246);
+}
+
+#enviar {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  border: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  background: rgba(230, 230, 230, 0.575);
+}
+
+#enviar:hover {
+  background: rgba(153, 153, 153, 0.575);
+  cursor: pointer;
+}
+
+/* Formulário Contato Mobile */
+
+@media (max-width: 600px) {
+  .cont_Title {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    margin-top: 60px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: rgb(53, 53, 53);
+  }
+
+  .form_Cont {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: grid;
+    width: 400px;
+    gap: 10px;
+  }
+
+  #name,
+  #telefone,
+  #email {
+    padding: 10px;
+    outline: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-left-width: 5px;
+    border-bottom-color: rgb(160, 160, 160);
+    border-left-color: rgb(206, 206, 206);
+  }
+
+  #name:focus,
+  #telefone:focus,
+  #email:focus {
+    border: solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left-width: 5px;
+    border-color: rgb(22, 119, 246);
+    background: rgba(187, 182, 182, 0.575);
+  }
+
+  textarea {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  textarea:focus {
+    outline-color: rgb(22, 119, 246);
+  }
+
+  #enviar {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    background: rgba(230, 230, 230, 0.575);
+  }
+}

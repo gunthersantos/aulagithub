@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contato_style.css" />
     <link
       rel="shortcut icon"
       href="img/favicon-512x512.png"
@@ -23,42 +23,21 @@
       }
     </style>
     <header>
-      <!-- Logomarca -->
-      <!-- <div class="logo">
-      <img alt="Logomarca" src="/img/Logomarca mais amigo Pet.png" /> -->
-      <!-- </div> -->
-      <!-- fim da Logomarca -->
       <nav class="navbar">
         <img class="logo" src="img/Logo.png" alt="logomarca" />
         <nav class="navbar navbar-light bg-light">
-          <!-- <ul class="redessociais">
-            <li>
-              <a href="#"
-                ><img src="img/Facebook.ico" alt="facebook ícone"
-              /></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/Twitter.ico" alt="twitter ícone" /></a>
-            </li>
-            <li>
-              <a
-                href="#"
-                <img
-                src="img/Instagram.ico"
-                alt="Instagram ícone"
-              ></a>
-            </li>
-          </ul> -->
-
-          <!-- <form class="form-inline">
+          <form class="form-inline">
             <input
               class="form-control mr-sm-2"
               type="search"
               placeholder="Pesquisar"
               aria-label="Pesquisar"
             />
-          </form> -->
-          <!-- <a href="#"><img src="img/search_icon.svg" alt="" class="search_button"/></a> -->
+          </form>
+
+          <a href="#"
+            ><img src="img/search_icon.svg" alt="" class="search_button"
+          /></a>
         </nav>
         <div class="mobile-menu">
           <div class="line1"></div>
@@ -66,24 +45,68 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="#">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Adote</a></li>
           <li><a href="#">Doe</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Cadastre-se</a></li>
-          <li><a href="contato_index.html">Contato</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <h1></h1>
-      </section>
+      <h2 class="cont_Title">Contato</h2>
+
+      <form class="form_Cont" action="destino.html" method="post">
+        <input
+          id="name"
+          type="text"
+          name="nome"
+          size="30"
+          maxlength="100"
+          required
+          placeholder="Nome"
+          autofocus
+        />
+
+        <input
+          type="tel"
+          name="telefone"
+          id="telefone"
+          size="20"
+          maxlength="30"
+          placeholder="Telefone"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          size="30"
+          maxlength="60"
+          placeholder="Email"
+          required
+        />
+
+        <textarea
+          id="msg"
+          cols="35"
+          rows="8"
+          placeholder="Mensagem"
+          required
+        ></textarea>
+
+        <input
+          id="enviar"
+          type="submit"
+          value="Enviar"
+          id="enviar"
+          name="enviar"
+        />
+      </form>
     </main>
-    <footer>
-      <p>Copyright © 2022 OxenTi Stack <sup>®</sup></p>
-    </footer>
     <script src="Js/mobile-navbar.js"></script>
   </body>
 </html>
